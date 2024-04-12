@@ -11,6 +11,10 @@ export default defineConfig({
         parent: "http://localhost:5173/assets/remoteEntry.js",
       },
       shared: ["react", "react-dom"],
+      filename: "remoteEntryChild.js",
+      exposes: {
+        "./Urun": "./src/pages/Urun",
+      },
     }),
   ],
   build: {
